@@ -1,0 +1,240 @@
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="static/assets/images/inner/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='calenplugin/css/daterangepicker.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/animate.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/font-awesome/css/font-awesome.min.css')}}">
+      <style>
+     @import url('https://fonts.googleapis.com/css?family=Lato:200,400|Playfair+Display');
+body {
+  background-image: linear-gradient(190deg, rgba(0, 0, 99, .05) 10%, rgba(0, 0, 255, .19) 100%);
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  float: left;
+  width: 30%;
+  min-width: 300px;
+  background-color: #f1f1f1;
+  margin: 1.5%;
+  padding: 2em 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.24);
+  text-align: center;
+}
+.wrapper>h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  font-size: 1.5em;
+  letter-spacing: .15em;
+  color: #333;
+}
+.details {
+  width: 95%;
+  margin: 0 auto 2em;
+  padding-top: 10.5em;
+  padding-bottom: 1em;
+  background-color: #FFEBC8;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.24);
+  transition: all ease-in 0.15s;
+}
+
+.wrapper:hover .details{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 5px rgba(0,0,0,0.22);
+  transform: translate(0px, -2px) scale(1.01);
+}
+
+.details>h1 {
+  font-family: "Playfair Display";
+  font-size: 1em;
+}
+.details>h2 {
+  font-family: sans-serif;
+  font-size: 1.4em;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+}
+.details>p {
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.image{
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  height: 250px;
+  margin: 0 auto -10em;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
+  transition: all ease-in .15s;
+}
+.wrapper:hover .image{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: translate(0px, -3px) scale(1.02);
+}
+  
+.i1{
+    background-image: url(https://pix8.agoda.net/hotelImages/109649/-1/00a837be56cc6efc4b2cb2319b85e8f1.jpg?ca=9&ce=1&s=450x450);
+}
+.i2 {
+  background-image: url(https://cf.bstatic.com/xdata/images/hotel/square200/50861602.webp?k=c45af463e82b52e46004cea8e6adff170aeaa57af4c5ac3de09971ead9f0239e&o=);
+}
+.i3 {
+  background-image: url(https://cdn1.goibibo.com/voy_ing/t_g/fa94a62efc4711e794ff0a9df65c8753.jpg   );
+  }
+  .i4 {
+  background-image: url(https://cf.bstatic.com/xdata/images/hotel/270x200/331987485.webp?k=991bdc717eba86c2ad3510b27e787293d30e399b1261924c179bbb23d1188c20&o=);
+  }
+  .i5 {
+  background-image: url(https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_225,q_auto,w_225/itemimages/17/76/1776841_v2.jpeg);
+  }
+  .i6 {
+  background-image: url(https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_225,q_auto,w_225/itemimages/98/05/980523_v1.jpeg);
+  }
+  .i7{
+  background-image: url(https://cdn1.goibibo.com/voy_ing/t_g/58a8f25e1a9711ebb45d0242ac110004.jpg);
+  }
+  .i8 {
+  background-image: url(https://cdn1.goibibo.com/voy_ing/t_g/2a75c47e3b8611ebad1f0242ac110004.jpg);
+  }
+  .i9{
+  background-image: url(https://cdn1.goibibo.com/voy_ing/t_r/c8286520fdde11ecaec20a58a9feac02.jpg);
+  }
+
+@media screen and (max-width: 1000px) {
+  .wrapper{
+    width: 47%;
+  }
+}
+@media screen and(max-width:700px){
+  .wrapper{
+    float: none;
+    width: 70%;
+    margin: 1em auto;
+  }
+}
+@media screen and(max-width:700px){
+  .wrapper{
+    float: none;
+    width: 70%;
+    margin: 1em auto;
+  }
+}
+
+
+      </style>
+
+    </head>
+    <body>
+      		
+      <div class="wrapper">
+        <h1>Citizen</h1>
+        <div class="image i1"></div>
+        <div class="details"><h1><em>MUMBAI</em></h1>
+        <h2>Home Stay in Porur</h2>
+        <p>3 Days - 2 Nights</p></div>
+        <h1>Rs.3000</h1>
+      </div>
+      
+      <div class="wrapper">
+        <h1>ITC Maratha</h1>
+        <div class="image i2"></div>
+        <div class="details"><h1><em></em>MUMBAI</h1>
+        <h2>Farmer's Walk</h2>
+        <p>4 Days - 3 Nights</p></div>
+        <h1>Rs.2500</h1>
+      </div>
+      
+      <div class="wrapper">
+        <h1>Hilton</h1>
+        <div class="image i3"></div>
+        <div class="details"><h1><em>MUMBAI</em></h1>
+        <h2>Mandarin Oriental</h2>
+        <p>3 Days - 2 Nights</p></div>
+        <h1>Rs.2000</h1>
+      </div>
+      
+      <div class="wrapper">
+        <h1>Radison Blue</h1>
+        <div class="image i4"></div>
+        <div class="details"><h1><em>MUMBAI</em></h1>
+        <h2>Ramada Hotel</h2>
+        <p>3 Days - 2 Nights</p></div>
+        <h1>Rs.3200</h1>
+      </div>
+      
+      <div class="wrapper">
+        <h1>Royal Orchid</h1>
+        <div class="image i5"></div>
+        <div class="details"><h1><em>MUMBAI</em></h1>
+        <h2>Surfer's Home</h2>
+        <p>3 Days - 2 Nights</p></div>
+        <h1>2750</h1>
+      </div>
+      
+      <div class="wrapper">
+        <h1>Hotel Bliss</h1>
+        <div class="image i6"></div>
+        <div class="details"><h1><em>MUMBAI</em></h1>
+        <h2>Farmer's Walk</h2>
+        <p>4 Days - 3 Nights</p></div>
+        <h1>Rs.2500</h1>
+      </div>
+      
+      <div class="wrapper">
+        <h1>Hotel Coast</h1>
+        <div class="image i7"></div>
+        <div class="details"><h1><em>MUMBAI</em></h1>
+        <h2>Surfer's Home</h2>
+        <p>3 Days - 2 Nights</p></div>
+        <h1>Rs.3400</h1>
+      </div>
+      
+      <div class="wrapper">
+        <h1>Fountain Fort</h1>
+        <div class="image i8"></div>
+        <div class="details"><h1><em>MUMBAI</em></h1>
+        <h2>Farmer's Walk</h2>
+        <p>4 Days - 3 Nights</p></div>
+        <h1>Rs.3999</h1>
+      </div>
+      
+      <div class="wrapper">
+        <h1>Hotel Blue</h1>
+        <div class="image i9"></div>
+        <div class="details"><h1><em>MUMBAI</em></h1>
+        <h2>Mandarin Oriental</h2>
+        <p>3 Days - 2 Nights</p></div>
+        <h1>Rs.2130</h1>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  
+  <script src="{{url_for('static', filename='assets/js/bangalore.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/js/jquery-3.4.1.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/jquery.validate.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/countries.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/wow.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/custom-dynamic.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/validate.js')}}"></script>
+    <script src="{{url_for('static', filename='calenplugin/js/moment.min.js')}}"></script>
+    <script src="{{url_for('static', filename='calenplugin/js/daterangepicker.min.js')}}"></script>
+    <script src="{{url_for('static', filename='calenplugin/js/select.js')}}"></script>
+
+    </body>
+
+</html>
